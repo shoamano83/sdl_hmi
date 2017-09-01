@@ -510,11 +510,11 @@ SDL.SDLModel = Em.Object.extend({
       if (SDL.SDLController.getApplicationModel(appID).navigationStream !==
         null) {
 
-        SDL.SDLModel.data.naviVideo = document.getElementById('html5Player');
-        SDL.SDLModel.data.naviVideo.src = SDL.SDLController.getApplicationModel(
-          appID
-        ).navigationStream;
-        SDL.SDLModel.data.naviVideo.play();
+        //SDL.SDLModel.data.naviVideo = document.getElementById('html5Player');
+        //SDL.SDLModel.data.naviVideo.src = SDL.SDLController.getApplicationModel(
+        //  appID
+        //).navigationStream;
+        //SDL.SDLModel.data.naviVideo.play();
       }
     },
 
