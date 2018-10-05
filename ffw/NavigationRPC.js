@@ -279,6 +279,7 @@ FFW.Navigation = FFW.RPCObserver.create(
           }
           case 'Navigation.StartAudioStream':
           {
+/*
             var text = 'Would you like to start Audio stream?';
             SDL.PopUp.create().appendTo('body').popupActivate(
               text, function(result) {
@@ -298,9 +299,16 @@ FFW.Navigation = FFW.RPCObserver.create(
                 }
               }
             );
+*/
             SDL.SDLController.getApplicationModel(
               request.params.appID
             ).navigationAudioStream = request.params.url;
+
+            FFW.Navigation.sendNavigationResult(
+              SDL.SDLModel.data.resultCode.SUCCESS,
+              request.id,
+              request.method
+            );
             break;
           }
           case 'Navigation.StopAudioStream':
@@ -356,6 +364,7 @@ FFW.Navigation = FFW.RPCObserver.create(
 
           case 'Navigation.StartStream':
           {
+/*
             var text = 'Would you like to start Video stream?';
             SDL.PopUp.create().appendTo('body').popupActivate(
               text, function(result) {
@@ -377,9 +386,16 @@ FFW.Navigation = FFW.RPCObserver.create(
                 }
               }
             );
+*/
             SDL.SDLController.getApplicationModel(
               request.params.appID
             ).navigationStream = request.params.url;
+
+            FFW.Navigation.sendNavigationResult(
+              SDL.SDLModel.data.resultCode.SUCCESS,
+              request.id,
+              request.method
+            );
             break;
           }
           case 'Navigation.StopStream':
